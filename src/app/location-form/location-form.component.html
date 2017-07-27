@@ -10,6 +10,6 @@
       <label for="longitude">Longitude</label>
       <input type="text" #longitude>
     </div>
-    <button (click)="getLocation()">Get Location!</button>
+    <button (click)="getLocation(latitude.value, longitude.value)">Get Location!</button>
   </form>
 </div>
