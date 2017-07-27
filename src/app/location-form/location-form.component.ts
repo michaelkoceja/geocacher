@@ -28,7 +28,8 @@ export class LocationFormComponent implements OnInit {
 
   getAddress(address: string, city: string, state: string) {
     this.geoCallService.getByAddress(address, city, state).subscribe(response => {
-      console.log(response.json().results[0].formatted_address.geometry.location)
+      this.address = response.json();
+      console.log(response.json().results[0].geometry.location);
     });
   }
 }

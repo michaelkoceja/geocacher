@@ -11,8 +11,8 @@
     </div>
     <button (click)="getLocation(latitude.value, longitude.value); latitude.value = ''; longitude.value = '';">Get Location!</button>
   </form>
-
-  <!-- <form>
+  <br>
+  <form>
     <div class="form-group">
       <label for="address">Address</label>
       <input type="text" #address>
@@ -26,17 +26,17 @@
       <input type="text" #state>
     </div>
     <button (click)="getAddress(address.value, city.value, state.value); address.value = ''; city.value = ''; state.value = '';">Get Location!</button>
-  </form> -->
+  </form>
 
 <div *ngIf="getLocation">
   <h2>Location found by inputed coords:</h2>
   <p>{{location}}</p>
 </div>
 
-<!-- <div *ngIf="getAddress">
+<div *ngIf="getAddress">
   <h2>Coords found by knputed address:</h2>
   <p>{{getLocation.formatted_address}}</p>
-</div> -->
+</div>
 
 
 <!-- <div *ngIf="noLocation">

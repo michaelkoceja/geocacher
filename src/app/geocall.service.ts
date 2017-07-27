@@ -13,6 +13,6 @@ export class GeocallService {
   }
 
   getByAddress(address: string, city: string, state: string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address" + address + "," + city + "," + state + "&key=" + geoKey)
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "," + city + "," + state + "&key=" + geoKey)
   }
 }
