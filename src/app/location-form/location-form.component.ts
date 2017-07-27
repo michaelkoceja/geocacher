@@ -9,18 +9,35 @@ import { GeocallService } from '../geocall.service'
   providers: [GeocallService]
 })
 export class LocationFormComponent implements OnInit {
-  location: any[]=null;
+  location: any[] = null;
+  address: any[] = null;
+  // noLocation: boolean = false;
 
   constructor(private geoCallService: GeocallService) { }
-
-  getLocation(lat: number, long: number) {
-  this.geoCallService.getByLatAndLong(lat, long).subscribe(response => {
-      this.location = response.json();
-      console.log(response.json().results[0].formatted_address);
-  });
-}
 
   ngOnInit() {
   }
 
+  getLocation(lat: number, long: number) {
+    // this.noLocation = false;
+    this.geoCallService.getByLatAndLong(lat, long).subscribe(response => {
+      this.location = response.json().results[0].formatted_address
+      console.log(response.json().results[0].formatted_address)
+    });
+  }
+
+  getAddress(address: string, city: string, state: string) {
+    this.geoCallService.getByAddress(address, city, state).subscribe(response => {
+      console.log(response.json().results[0].formatted_address.geometry.location)
+    });
+  }
 }
+
+// if (response.json().location.length > 0) {
+//   this.location = response.json();
+//   console.log(response.json().results[0].formatted_address);
+// } else {
+//   this.noLocation = true;
+//   console.log(this.noLocation);
+// }
+// });

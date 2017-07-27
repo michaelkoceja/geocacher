@@ -1,6 +1,5 @@
 <h1>SOMETHING SAYING SOMETHING</h1>
 
-<div class="container">
   <form>
     <div class="form-group">
       <label for="latitude">Latitude</label>
@@ -10,6 +9,36 @@
       <label for="longitude">Longitude</label>
       <input type="text" #longitude>
     </div>
-    <button (click)="getLocation(latitude.value, longitude.value)">Get Location!</button>
+    <button (click)="getLocation(latitude.value, longitude.value); latitude.value = ''; longitude.value = '';">Get Location!</button>
   </form>
+
+  <!-- <form>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" #address>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" #city>
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <input type="text" #state>
+    </div>
+    <button (click)="getAddress(address.value, city.value, state.value); address.value = ''; city.value = ''; state.value = '';">Get Location!</button>
+  </form> -->
+
+<div *ngIf="getLocation">
+  <h2>Location found by inputed coords:</h2>
+  <p>{{location}}</p>
 </div>
+
+<!-- <div *ngIf="getAddress">
+  <h2>Coords found by knputed address:</h2>
+  <p>{{getLocation.formatted_address}}</p>
+</div> -->
+
+
+<!-- <div *ngIf="noLocation">
+  <h2>No name of location with the coords of {{latitude}}{{longitude}}</h2>
+</div> -->
