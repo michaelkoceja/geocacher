@@ -11,7 +11,7 @@ import { GeocallService } from '../geocall.service'
 export class LocationFormComponent implements OnInit {
 
   location: any[] = null;
-  address: any[] = null;
+  addressFromAPI: any[] = null;
   // newCoords: any[];
   // noLocation: boolean = false;
 
@@ -30,7 +30,7 @@ export class LocationFormComponent implements OnInit {
 
   getAddress(address: string, city: string, state: string) {
     this.geoCallService.getByAddress(address, city, state).subscribe(response => {
-      this.address = response.json().results[0].geometry.location;
+      this.addressFromAPI = response.json().results[0].geometry.location;
       console.log(response.json().results[0].geometry.location);
 
     });

@@ -33,12 +33,18 @@
   <p>{{location}}</p>
 </div>
 
-<div *ngIf="getAddress">
+<div *ngIf="addressFromAPI">
+  <h2>Coords found by inputed address:</h2>
+  <p>{{addressFromAPI.lat}}</p>
+  <p>{{addressFromAPI.lng}}</p>
+</div>
+
+<!-- <div *ngIf="getAddress">
   <h2>Coords found by inputed address:</h2>
   <p>{{address}}</p>
-</div>
+</div> -->
 
 
-<div *ngIf="noLocation">
+<!-- <div *ngIf="noLocation">
   <h2>No name of location with the coords of {{latitude}}{{longitude}}</h2>
-</div>
+</div> -->
