@@ -1,28 +1,75 @@
 # Geocacher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+#### An Epicodus Independent Project JavaScript week #4
 
-## Development server
+#### By Michael Koceja
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+* This is a project showing my ability with Angular CLI and api calls.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## User Story:
 
-## Build
+* As a user, I'd like to enter an address and have the page display the addresses coordinates(latitude, longitude).
+* As a user, I'd like to enter coordinates (latitude, longitude) and have the page display the coordinates address.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Installation Requirements
 
-## Running unit tests
+* You must install or have installed a current version of:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  * [Node and npm](https://nodejs.org/en/)
 
-## Running end-to-end tests
+  * [TypeScript](https://www.typescriptlang.org/#download-links)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+  * [Angular CLI](https://github.com/angular/angular-cli)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Setup
+
+* Clone this repository
+
+  `$ git clone https://github.com/michaelkoceja/geocacher`
+
+
+* Run the following commands from the root directory:
+
+  `$ npm install`
+
+  `$ bower install`
+
+  This will download the project's dependencies
+
+* Build the project,
+
+  Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+* Run the server,
+
+  Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+* The project should load!
+
+## Known Bugs
+
+There are currently no known bugs at this time.
+
+## Support and contact details
+
+For questions, concerns, or feedback, email me at michael.koceja@gmail.com
+
+## Technologies Used
+
+* HTML
+* TypeScript
+* JavaScript
+* Angular 2
+* Angular CLI
+* jQuery
+* NPM
+* Bower
+
+### License
+
+MIT
+
+Copyright (c) 2017 Michael Koceja
